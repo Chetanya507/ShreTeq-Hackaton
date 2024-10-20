@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Network with Fact-Checking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="logo">📰 Newsify</div>
+        </header>
+
+        <div class="main-container">
+            <main class="news-feed">
+                <section class="news-highlight">
+                    <h2>Latest News with Fact-Checks( Roughly Takes 2 days to verify)</h2>
+                </section>
+
+                <!-- New Article Submission Form -->
+                <div class="new-article" id="news-article">
+                    <form id="NewsForm">
+                        <textarea class="article-input" id="article-input" placeholder="Share a news update..."></textarea>
+                        <div class="new-article-actions">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- News Cards Container -->
+                <div class="cards-container" id="cards-container">
+                    <!-- News cards will be dynamically inserted here -->
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>© 2024 NewsNetwork. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- News Card Template -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="News Image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is Title</h3>
+                <h6 class="news-source" id="news-source">Author • Date</h6>
+                <p class="news-desc" id="news-desc">Article content goes here.</p>
+                <p class="news-bias">Checking for misinformation...</p>
+            </div>
+        </div>
+    </template>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <!-- Your custom JavaScript file -->
+    <script src="jstest.js"></script>
+</body>
+</html>

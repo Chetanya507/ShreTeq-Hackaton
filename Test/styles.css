@@ -1,0 +1,192 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0072b1;
+    padding: 20px;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+/* Main Content (News Feed) */
+.news-feed {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Article Styles */
+.news-highlight {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.new-article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.new-article textarea {
+    padding: 12px;
+    border: 2px solid #ccd6e0;
+    border-radius: 6px;
+    resize: none;
+    height: 120px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+.new-article textarea:focus {
+    border-color: #0072b1;
+    outline: none;
+}
+
+.new-article-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-article button {
+    background-color: #0072b1;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-article button:hover {
+    background-color: #005b8a;
+}
+
+/* Fact Check Section */
+.fact-check {
+    margin-top: 20px;
+}
+
+.fact-check h2 {
+    margin-bottom: 15px;
+}
+
+/* Cards for Articles */
+.article-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h3 {
+    font-size: 24px;
+    color: #0072b1;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+.fact-check-result {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ff5722;
+}
+
+/* Fact-Check Results Styles */
+.fact-check-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.fact-check-card {
+    flex: 1 1 calc(33% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fact-check-card h4 {
+    font-size: 20px;
+    color: #0072b1;
+    margin-bottom: 10px;
+}
+
+.fact-check-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #0072b1;
+    color: white;
+    border-radius: 12px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+}

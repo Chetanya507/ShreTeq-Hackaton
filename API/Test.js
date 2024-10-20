@@ -65,10 +65,10 @@ async function fetchFactCheck(title, description, imageUrl, newsBiasElement) {
         }
 
         // Try fact check with description query
-        const factCheckRes2 = await fetchFactCheckByQuery(query2);
+        const factCheckRes2 = await fetchFactCheckByQuery(query2); // Fix typo here
         if (factCheckRes2) {
             newsBiasElement.innerHTML = `Fact-check: ${factCheckRes2}`;
-            return; // If found, stop further checks
+            return; // If found, stop further check
         }
 
         // If no fact-check available for text, attempt image fact-checking
