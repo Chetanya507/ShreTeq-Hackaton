@@ -1,6 +1,6 @@
-// const API_KEY_NEWS = "9cd2a16bd8814df7a165635b91068dd7";
+const API_KEY_NEWS = "9cd2a16bd8814df7a165635b91068dd7";
 const urlNews = "https://newsapi.org/v2/everything?q=";
-// const API_KEY_FACT = "AIzaSyDn_19gFYOKo39Fz_zl2PmA-YrhgKR2SMw";
+const API_KEY_FACT = "AIzaSyDn_19gFYOKo39Fz_zl2PmA-YrhgKR2SMw";
 const urlFactCheckText = "https://factchecktools.googleapis.com/v1alpha1/claims:search";
 const urlFactCheckImage = "https://factchecktools.googleapis.com/v1alpha1/claims:imageSearch?key=";
 

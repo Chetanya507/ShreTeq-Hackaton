@@ -93,7 +93,7 @@ async function fetchFactCheck(title, resultElement) {
             }).join('<br>');
             resultElement.innerHTML = `Fact-check results:<br>${results}`;
         } else {
-            resultElement.innerHTML = 'Checking.....will take 2 days';
+            resultElement.innerHTML = 'Please wait while our algorithms checks your news.';
         }
     } catch (error) {
         console.error("Error fetching fact check:", error);
@@ -116,7 +116,7 @@ document.getElementById('NewsForm').addEventListener('submit', (e) => {
         content: articleContent,
         author: "Anonymous",
         date: new Date().toISOString(),
-        imageUrl: "https://via.placeholder.com/400x200"
+        imageUrl: "https://th.bing.com/th?id=OIP.EV4CueKMVtIGwKE1h18H6QHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
     };
 
     console.log("Pushing new article to Firebase:", newArticle);
