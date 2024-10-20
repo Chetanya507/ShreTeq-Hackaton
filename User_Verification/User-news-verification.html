@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Network</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    
+    <script src="firebase-verification.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <div class="logo">📰 Newsify</div>
+        </header>
+
+        <div class="main-container">
+            <!-- Main Content (News Feed & Posting Feature) -->
+            <main class="news-feed">
+                <section class="news-highlight">
+                    <h2>News Highlight for You</h2>
+                    <p>Breaking: New Discovery in Space Exploration 🚀</p>
+                    <p>Global markets witness unprecedented growth 📈</p>
+                </section>
+
+                <!-- New Article Feature -->
+                <div class="new-article" id="news-article">
+                    <form id="NewsForm">
+                        <textarea class="article-input" id="article-input" placeholder="Share a news update..."></textarea>
+                        <div class="upload-container" id="upload-container"></div>
+                        <div class="new-article-actions">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+
+                    <!-- Share Modal -->
+                    <div id="share-modal" style="display: none;">
+                        <p>Share this link:</p>
+                        <p id="article-link"></p>
+                        <button onclick="copyLink()">Copy Link</button>
+                        <button onclick="closeShareModal()">Close</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 NewsNetwork. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the header */
+header {
+    background-color: #fff;
+    /* Background color of the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    padding: 10px 20px;
+}
+
+/* Style for the navigation bar */
+.navigationbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: 12 auto;
+    /*Changed the margin value from 0 to 12(left align)----Chetanya----*/
+}
+
+/* Style for the logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    /*Increased from 60 to 80 ----Chetanya*/
+    /* Logo height */
+    margin-right: 20px;
+    /* Space between logo and text */
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* Dark text color */
+}
+
+/* Style for the navigation list */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 0.1px;
+    /* Space between nav items */
+    align-items: baseline;
+    /*alignment changed ----Chetanya*/
+}
+
+/* Style for navigation items */
+.nav-item {
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    color: whitesmoke;
+    /* Light grey text color */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.nav-item:hover {
+    color: blanchedalmond;
+    /* Change color on hover */
+}
+
+/* Style for the search container */
+.search-container {
+    display: flex;
+    align-items: last baseline;
+    /*Alignment Changed----Chetanya*/
+    gap: 10px;
+    /* Space between input and button */
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    /* Light grey border */
+    border-radius: 4px;
+    /* Rounded corners */
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    /* Dark button background */
+    color: #fff;
+    /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth background transition */
+}
+
+.search-button:hover {
+    background-color: #000;
+    /* Change background on hover */
+}

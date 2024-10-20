@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsify: A guardian of truth, ensuring only accurate information reaches your readers.</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="SearchBox/searchbox.css">
+  <link rel="stylesheet" href="NewsCard.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <!-- <script src="API.js" defer></script> -->
+  <script src="API\Test.js" defer></script>
+  <script src="SearchBox/searchboxscript.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    function reload() {
+      window.location.reload()
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navigationbar">
+      <div class="navdiv">
+        <div class="logo">
+          <img src="Designer.png" alt="Logo">
+          <a href="#" onclick="reload()">Newsify</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item" id="world-news" onclick="onNavItemClick('world-news')">World</li>
+          <li class="nav-item" id="geopolitics" onclick="onNavItemClick('geopolitics')">Geopolitics</li>
+          <li class="nav-item" id="business-economics" onclick="onNavItemClick('business')">Business</li>
+          <li class="nav-item" id="technology-ai" onclick="onNavItemClick('technology')">Technology</li>
+          <li class="nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+          <li class="nav-item" id="india" onclick="onNavItemClick('india')">India</li>
+          <li class="nav-item" id="startups" onclick="onNavItemClick('startups')">Startups</li>
+          <li class="nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+        </ul>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        <button id="search-button" class="search-button">Search</button>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <main>
+    <!-- Ensured only one 'cards-container' div element -->
+    <div class="cards-container container flex" id="cards-container">
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="Nothing" id="news-img">
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget</h6>
+          <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+            iusto.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <template id="template-news-card">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/400x200" alt="Nothing" id="news-img">
+      </div>
+      <div class="card-content">
+        <h3 id="news-title">This is Title</h3>
+        <h6 class="news-source" id="news-source">End Gadget</h6>
+        <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, iusto.
+        </p>
+        <p class="news-bias">Checking for misinformation...</p> <!-- Changed to class -->
+      </div>
+    </div>
+  </template>
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="Designer.png" alt="Logo">
+        <p>Newsify</p>
+      </div>
+
+      <div class="footer-subscribe">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter to get the latest updates directly to your inbox.</p>
+        <form action="#" method="post" id="subscribe-form" class="subscribe-form">
+          <input type="email" name="email" id="subscribe-email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="confirmation-message"></p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="AboutUsPage/aboutus.html">About Us</a></li>
+          <li><a href="User_Verification/User-news-verification.html">Check your news</a></li>
+          <li><a href="Terms/privacy.html">Privacy Policy</a></li>
+          <li><a href="Terms/TermsoUsage.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@newsify.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Truth Street, Knowledge City</p>
+      </div>
+
+      <div class="footer-feedback">
+        <h3>Feedback</h3>
+        <p>We'd love to hear your thoughts and suggestions!</p>
+        <form id="feedback-form" action="#" method="post" class="feedback-form">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" id="email" placeholder="Your Email" required>
+          <textarea name="feedback" rows="4" id="feedback" placeholder="Your Feedback" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Newsify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+  <!-- Firebase Feedback and Newsletter Scripts -->
+  <script src="firebase-feedback.js"></script>
+  <script src="firebase-emailnews copy.js"></script>
+
+
+</html>

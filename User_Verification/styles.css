@@ -1,0 +1,375 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Modern, popular font */
+    background-color: #f0f4f8;
+    /* Softer background */
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+    /* Space for footer */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    border-radius: 12px;
+    /* More rounded corners */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0072b1;
+    /* Brighter blue */
+    padding: 20px;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* Add spacing for better readability */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4e9ff;
+    /* Subtle hover effect */
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+/* Main Content (News Feed) */
+.news-feed {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Spacing between articles */
+}
+
+/* Article Styles */
+.article,
+.news-highlight {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article h3,
+.news-highlight h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0072b1;
+    /* Use brand color for headings */
+}
+
+.article p.article-content,
+.news-highlight p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* New Article Feature */
+.new-article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.new-article textarea {
+    padding: 12px;
+    border: 2px solid #ccd6e0;
+    /* More modern look */
+    border-radius: 6px;
+    resize: none;
+    height: 120px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+.new-article textarea:focus {
+    border-color: #0072b1;
+    /* Focus state color */
+    outline: none;
+}
+
+.new-article-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-article button,
+.article-actions button,
+.button,
+.publish-btn,
+.like-button,
+.comment-button,
+.share-button {
+    background-color: #0072b1;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    /* Consistent button padding */
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-article button:hover,
+.article-actions button:hover,
+.button:hover,
+.publish-btn:hover,
+.like-button:hover,
+.comment-button:hover,
+.share-button:hover {
+    background-color: #005b8a;
+    /* Slightly darker on hover */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 280px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-left: 30px;
+}
+
+.right-sidebar h3 {
+    font-size: 20px;
+    color: #0072b1;
+    margin-bottom: 15px;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 12px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.story-item:hover {
+    transform: scale(1.03);
+}
+
+.story-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.story-title {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Image Upload Label */
+.image-upload-label,
+.upload-label {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #0072b1;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.image-upload-label:hover,
+.upload-label:hover {
+    background-color: #005b8a;
+}
+
+/* Share Modal */
+.share-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.share-modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.close-modal {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #0072b1;
+    color: white;
+    border-radius: 12px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .right-sidebar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .story-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Animation for articles */
+.article {
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth scaling and shadow change */
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start off-screen */
+    animation: fadeIn 0.5s forwards;
+    /* Entry transition */
+}
+
+.article.visible {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to its position */
+}
+
+/* Animation for entry transition */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Textarea Styles */
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* Rounded edges */
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Smooth border color transition */
+}
+
+textarea:hover {
+    border-color: #0066cc;
+    /* Blue border on hover */
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    /* Ambient lighting */
+}
+
+/* File Upload Button */
+#image-upload {
+    display: none;
+    /* Hide default file input */
+}
+
+/* Pop-out effect for buttons */
+.button:active,
+.publish-btn:active,
+.like-button:active,
+.comment-button:active,
+.share-button:active,
+.upload-label:active {
+    transform: scale(0.95);
+    /* Pop-out effect */
+}
+
+/* General hover effect for articles */
+.article:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}

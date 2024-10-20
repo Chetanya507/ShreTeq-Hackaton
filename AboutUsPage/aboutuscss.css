@@ -1,0 +1,197 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar styling */
+nav {
+    background-color: #007bff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Slideshow styling */
+header {
+    width: 100%;
+    height: 100vh;
+    /* Set the height to 100% of the viewport */
+    margin-top: 60px;
+    /* Adjust for fixed navbar */
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Full height */
+    overflow: hidden;
+    /* Ensure content doesn't overflow */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire area without stretching */
+}
+
+
+/* Section styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 28px;
+    color: #007bff;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Board of Directors section */
+.directors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.director-card {
+    text-align: center;
+    margin: 20px;
+    width: 250px;
+}
+
+.director-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.director-card:hover img {
+    transform: scale(1.05);
+}
+
+.director-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.director-card p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Values section */
+.values {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.values h2 {
+    color: #007bff;
+}
+
+.values p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
